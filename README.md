@@ -7,6 +7,6 @@ Small businesses (restaurants, bars, cleaners, etc.) are suffering. Many will go
 - node-sass v.4.13.1
 
 ## npm scripts
- `npm run start` run app in development mode (default port: 3000)
- `npm run build` build for production
- `npm run lint` lint all js/jsx files 
+- `npm run start` run app in development mode (default port: 3000)
+- `npm run build` build for production
+- `npm run lint` lint all js/jsx files 
