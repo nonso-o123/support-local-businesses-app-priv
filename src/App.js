@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Airtable from "airtable";
 import showdown from "showdown";
 import { Col, Row, Form, Button } from "react-bootstrap";
+import { Route, Link } from "react-router-dom";
+import Step2 from "./components/Step2";
+import Thankyou from "./components/Thankyou";
 
 const markdownConverter = new showdown.Converter();
 
@@ -61,6 +64,7 @@ class Verify extends Component {
   }
 
   render() {
+    //const { url } = this.props.match;
     return (
       <div className="App">
         <Form onSubmit={this.handleSubmit}>
@@ -112,9 +116,12 @@ class Verify extends Component {
               </Col>
             </Form.Group>
           </fieldset>
-          <Button variant="primary" type="submit">
-            Continue
-          </Button>
+          <Link to="Step2">
+            <Button variant="primary" type="submit">
+              Continue
+            </Button>
+          </Link>
+          <Route path="/Step2" component={Step2} />
         </Form>
       </div>
     );
